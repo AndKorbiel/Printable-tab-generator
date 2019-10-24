@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Printable tab generator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="App">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3><input type="text" placeholder="Song title"></input></h3>
+                    <p class="desc"><input type="text" placeholder="Description"></input></p>
+                    <div class="tables tabs">
+                        <table class="pre-tabs">
+                            <tr><td><span class="preName">e</span></td></tr>
+                            <tr><td><span class="preName">B</span></td></tr>
+                            <tr><td><span class="preName">G</span></td></tr>
+                            <tr><td><span class="preName">D</span></td></tr>
+                            <tr><td><span class="preName">A</span></td></tr>
+                            <tr><td><span class="preName">E</span></td></tr>
+                        </table>
+                    </div>
+                </div>
+                <button type="button" class="btn add btn-primary" onClick=addTable()>+</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script type="text/javascript" src="js/app.js"></script>
+</html>
