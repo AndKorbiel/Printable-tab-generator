@@ -4,18 +4,18 @@
 
 .pre-tabs, .tabs-first, .App table {
     float: left;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .pre-tabs {
     position: absolute;
-    left: -25px;
+    left: -21px;
 }
 
 .App .tables td {
     padding: 5px;
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     width: 40px;
     height: 30px;
     position: relative;
@@ -46,6 +46,10 @@
     border: 0;
 }
 
+.App .pre-tabs td {
+    width: 30px;
+}
+
 .tables input {
     width: 34px;
     position: absolute;
@@ -65,9 +69,10 @@
     background: rgb(255, 255, 255);
     border: 0;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
-    left: 19px;
+    left: 12px;
+    width: 26px;
 }
 
 .add {
@@ -79,12 +84,6 @@
     background: white;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1313px;
-    }
-}
-
 h3, .desc,
 h3 input, .desc input {
     border: 0;
@@ -93,3 +92,23 @@ h3 input, .desc input {
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media print {
+    a, .btn {
+        display: none;
+    }
+}
+
+@page  
+{ 
+    size: auto;   /* auto is the initial value */ 
+
+    /* this affects the margin in the printer settings */ 
+    margin: 15mm;  
+} 

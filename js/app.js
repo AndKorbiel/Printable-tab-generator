@@ -27,6 +27,12 @@ function addToInputs() {
     })
 }
 
+function init() {
+    for (let i = 0; i <12; i++) {
+        addTable()
+    }
+}
+
 const addClassOnChange = (e) => {
     if (e.target.value) {
         e.target.classList.add("filled")
@@ -35,3 +41,4 @@ const addClassOnChange = (e) => {
     }
 };
 
+init();
