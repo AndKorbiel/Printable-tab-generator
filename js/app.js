@@ -1,6 +1,6 @@
 const tablesSelector = document.querySelector('.tabs');
 
-const addTable = () => {
+function addTable() {
     let tableRows = [],
         tableCells = [],
         tabs = [],
@@ -18,7 +18,7 @@ const addTable = () => {
     newTab.innerHTML += tabs;
     tablesSelector.appendChild(newTab)
     addToInputs()
-};
+}
 
 function addToInputs() {
     let tabInputs = document.querySelectorAll('.tabInput');
@@ -27,18 +27,28 @@ function addToInputs() {
     })
 }
 
-function init() {
-    for (let i = 0; i <12; i++) {
-        addTable()
-    }
+function removeTab() {
+    const lastTab = document.querySelector('.tabs');
+    lastTab.removeChild(lastTab.lastChild)
 }
 
-const addClassOnChange = (e) => {
+function addClassOnChange(e) {
     if (e.target.value) {
         e.target.classList.add("filled")
     } else {
         e.target.classList.remove("filled")
     }
-};
+}
+
+function generatePDF() {
+    var element = document.querySelector('.App');
+    html2pdf(element);
+}
+
+function init() {
+    for (let i = 0; i <12; i++) {
+        addTable()
+    }
+}
 
 init();

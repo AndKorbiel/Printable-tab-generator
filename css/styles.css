@@ -59,7 +59,6 @@
     background: rgba(245, 222, 179, 0);
     border: 0;
     text-align: center;
-    border-right: 1px dashed #f7f7f7;
     z-index: 99;
 }
 
@@ -75,9 +74,28 @@
     width: 26px;
 }
 
+.btn {
+    width: 150px;
+}
+
+.btn-primary:hover {
+    background-color: #3f51b5;
+    border-color: #3f51b5;
+}
+
 .add {
     position: absolute;
     right: 40px;
+    background-color: #607d8b;
+    border-color: #607d8b;
+}
+
+.remove {
+    position: absolute;
+    right: 40px;
+    top: 70px;
+    background: #3a3a3a;
+    border-color: #3a3a3a;
 }
 
 .tables .filled {
@@ -105,10 +123,10 @@ h3 input, .desc input {
     }
 }
 
-@page  
-{ 
-    size: auto;   /* auto is the initial value */ 
+@page
+{
+    size: auto;   /* auto is the initial value */
 
-    /* this affects the margin in the printer settings */ 
-    margin: 15mm;  
-} 
+    /* this affects the margin in the printer settings */
+    margin: 15mm;
+}
