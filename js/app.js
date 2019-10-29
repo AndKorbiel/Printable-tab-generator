@@ -40,11 +40,6 @@ function addClassOnChange(e) {
     }
 }
 
-function generatePDF() {
-    var element = document.querySelector('.App');
-    html2pdf(element);
-}
-
 function init() {
     for (let i = 0; i <12; i++) {
         addTable()
