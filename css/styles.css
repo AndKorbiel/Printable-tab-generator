@@ -1,5 +1,10 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 .App {
     padding-top: 30px;
+    position: relative;
 }
 
 .pre-tabs, .tabs-first, .App table {
@@ -27,7 +32,7 @@
     border-right: 1px solid black;
 }
 
-.App .tables .rows:first-child td {
+.App .tables .rows:first-child div {
     border-top: 0;
     border-right: 0;
 }
@@ -46,90 +51,8 @@
     border: 0;
 }
 
-.App .pre-tabs td {
+.App .pre-tabs div {
     width: 30px;
-}
-
-.tables input {
-    width: 34px;
-    position: absolute;
-    top: 12px;
-    font-size: 16px;
-    height: 32px;
-    background: rgba(245, 222, 179, 0);
-    border: 0;
-    text-align: center;
-    z-index: 99;
-}
-
-.tables .preName {
-    position: absolute;
-    top: 13px;
-    background: rgb(255, 255, 255);
-    border: 0;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    left: 12px;
-    width: 26px;
-}
-
-.btn {
-    width: 150px;
-}
-
-.btn-primary:hover {
-    background-color: #3f51b5;
-    border-color: #3f51b5;
-}
-
-.add {
-    position: absolute;
-    right: 40px;
-    background-color: #607d8b;
-    border-color: #607d8b;
-}
-
-.remove {
-    position: absolute;
-    right: 40px;
-    top: 70px;
-    background: #3a3a3a;
-    border-color: #3a3a3a;
-}
-
-.tables .filled {
-    background: white;
-}
-
-h3, .desc,
-h3 input, .desc input {
-    border: 0;
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1000px;
-    }
-}
-
-@media print {
-    a, .btn {
-        display: none;
-    }
-
-    .row {
-        display: table;
-    }
-}
-
-@page {
-    size: auto;  
-    margin: 15mm;
 }
 
 .table {
@@ -146,3 +69,161 @@ h3 input, .desc input {
     height: 30px;
     width: 40px;
 }
+
+.tables input {
+    width: 34px;
+    position: absolute;
+    top: 12px;
+    font-size: 16px;
+    height: 32px;
+    background: rgba(245, 222, 179, 0);
+    border: 0;
+    text-align: center;
+    z-index: 99;
+}
+
+.tables .preName {
+    position: relative;
+    top: 12px;
+    background: rgb(255, 255, 255);
+    border: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    left: 12px;
+    width: 26px;
+    height: 30px;
+}
+
+#buttons-container.hide {
+    opacity: 0;
+    transition: 0.7s;
+    z-index: -1;
+}
+
+#buttons-container.show {
+    opacity: 1;
+    transition: 0.7s;
+    z-index: 9;
+}
+
+.btn {
+    position: fixed;
+    width: 150px;
+    border-radius: 0;
+    border-color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #F44336;
+    border-color: #000000;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+}
+
+.add {
+    top: 30px;
+    right: 40px;
+    background-color: #4CAF50;
+}
+
+.remove {
+    right: 40px;
+    top: 67px;
+    background: #c18f20;
+}
+
+.print {
+    right: 40px;
+    top: 104px;
+    background: #8BC34A;
+}
+
+.tables .filled {
+    background: white;
+}
+
+h3, .desc,
+h3 input, .desc input {
+    border: 0;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer, header {
+    background: #272727;
+    padding: 15px;
+    margin-top: 60px;
+}
+
+footer p {
+    text-align: center;
+    color: #ffffff;
+}
+
+header {
+    background: #8bc34a;
+    margin-top: 0;
+    margin-bottom: 60px;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    margin: 40px 0;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 360px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 680px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 670px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media print {
+    a, .btn, header, footer {
+        display: none;
+    }
+
+    .row {
+        display: table;
+    }
+
+    @page {
+        size:  auto;
+        margin: 0mm 15mm;
+    }
+
+    html {
+        margin: 0px;
+    }
+
+    body {
+        margin: 10mm 0;
+    }
+}
+
+
+

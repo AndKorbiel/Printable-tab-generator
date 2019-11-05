@@ -1,11 +1,10 @@
-const tablesSelector = document.querySelector('.tabs');
-
 function addTable() {
+    const tablesSelector = document.querySelector('.tabs');
     let tableRows = [],
         tableCells = [],
         tabs = [],
         newTab = document.createElement('div');
-    
+
         newTab.className = "table";
 
     for (let y = 0; y < 8; y++) {
@@ -18,7 +17,7 @@ function addTable() {
 
     tabs.push(tableRows.join(""));
     newTab.innerHTML += tabs;
-    tablesSelector.appendChild(newTab)
+    tablesSelector.appendChild(newTab);
     addToInputs()
 }
 
@@ -42,10 +41,25 @@ function addClassOnChange(e) {
     }
 }
 
+function callPrint() {
+    window.print();
+}
+
+function myScrollFunc() {
+    const myID = document.getElementById("buttons-container");
+    let y = window.scrollY;
+    if (y >= 200) {
+        myID.className = "show"
+    } else {
+        myID.className = "hide"
+    }
+}
+
 function init() {
-    for (let i = 0; i <44; i++) {
+    for (let i = 0; i <18; i++) {
         addTable()
     }
+    window.addEventListener("scroll", myScrollFunc);
 }
 
 init();
