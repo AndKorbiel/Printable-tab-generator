@@ -46,13 +46,20 @@ function callPrint() {
 }
 
 function myScrollFunc() {
-    const myID = document.getElementById("buttons-container");
+    const element = document.getElementById("buttons-container");
     let y = window.scrollY;
     if (y >= 200) {
-        myID.className = "show"
+        element.className = "show"
     } else {
-        myID.className = "hide"
+        element.className = "hide"
     }
+}
+
+function toogleMenu() {
+    const element = document.getElementById("help");
+    const arrow = document.getElementById("arrow");
+    element.classList.toggle('show');
+    arrow.classList.toggle('rotate')
 }
 
 function init() {
