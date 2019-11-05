@@ -4,14 +4,16 @@ function addTable() {
     let tableRows = [],
         tableCells = [],
         tabs = [],
-        newTab = document.createElement('table');
+        newTab = document.createElement('div');
+    
+        newTab.className = "table";
 
     for (let y = 0; y < 8; y++) {
-        tableCells.push('<td><input type="text" class="tabInput"></input></td>');
+        tableCells.push('<div><input type="text" class="tabInput"></input></div>');
     }
 
     for (let rows = 0; rows < 6; rows++) {
-        tableRows.push('<tr>'+tableCells.join("")+'</tr>')
+        tableRows.push('<div class="rows">'+tableCells.join("")+'</div class="rows">')
     }
 
     tabs.push(tableRows.join(""));
@@ -41,7 +43,7 @@ function addClassOnChange(e) {
 }
 
 function init() {
-    for (let i = 0; i <12; i++) {
+    for (let i = 0; i <44; i++) {
         addTable()
     }
 }

@@ -12,7 +12,7 @@
     left: -21px;
 }
 
-.App .tables td {
+.App .rows div {
     padding: 5px;
     margin: 0;
     font-size: 18px;
@@ -23,20 +23,20 @@
     border-bottom: 1px solid #565656;
 }
 
-.App .tables tr td:last-child {
+.App .tables .rows div:last-child {
     border-right: 1px solid black;
 }
 
-.App .tables tr:first-child td {
+.App .tables .rows:first-child td {
     border-top: 0;
     border-right: 0;
 }
 
-.App .tables tr td:first-child {
+.App .tables .rows div:first-child {
     border-left: 1px solid black;
 }
 
-.App .tables tr:first-child  td:first-child {
+.App .tables .rows:first-child div:first-child {
     border-left: 0;
 }
 
@@ -121,12 +121,28 @@ h3 input, .desc input {
     a, .btn {
         display: none;
     }
+
+    .row {
+        display: table;
+    }
 }
 
-@page
-{
-    size: auto;   /* auto is the initial value */
-
-    /* this affects the margin in the printer settings */
+@page {
+    size: auto;  
     margin: 15mm;
+}
+
+.table {
+    border-spacing: 0;
+    display: inline-block;
+    width: 320px;
+}
+.rows {
+    display: table-row;
+}
+.rows > div {
+    display: table-cell;
+    position: relative;
+    height: 30px;
+    width: 40px;
 }
