@@ -298,7 +298,7 @@ header img.rotate {
 }
 
 @media print {
-    a, .btn, header, footer {
+    a, .btn, header, footer, .sub-header {
         display: none;
     }
 
